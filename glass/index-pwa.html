@@ -21,7 +21,7 @@
                     </svg>
                     <h1 class="neon__title">Mixtape</h1>
                     <p class="neon__description">Mix Stream DJs.</p>
-                    <a onclick="sharePWA()" class="neon__button"> Install
+                    <a onclick="installPWA()" class="neon__button"> Install
                         <svg class="neon__button-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24.0099 4C29.3698 4 33.7763 8.21182 34 13.5486H33.9477C33.954 13.7038 33.9242 13.8583 
                                 33.8606 14H34.1729C36.6069 14 39.1557 15.687 40.1777 19.7596L40.2887 20.2401L41.8265 32.6295C42.9332 
@@ -108,15 +108,8 @@
         </section>
 
         <script>
-            function sharePWA() {
-              if (navigator.share) {
-                navigator.share({
-                  title: 'Mixtape',
-                  url: 'https://mix-tape.web.app'
-                });
-              } else {
-                alert('La función de compartir no está disponible en este dispositivo');
-              }
+            function installPWA() {
+              window.open('https://mix-tape.web.app', '_self');
             }
           </script>
     </body>
